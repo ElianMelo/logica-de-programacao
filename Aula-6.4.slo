@@ -1,0 +1,20 @@
+tipo produto{
+    inteiro: codigo;
+    caractere: nome;
+}
+
+início {
+    arquivo: arq_prod;
+    produto: aux;
+    
+    abra(arq_prod);
+    //avance(arq_prod);
+    posicione(arq_prod, 2);
+    
+    aux.codigo = 222;
+    aux.nome = "Esteira";
+    
+    guarde(arq_prod,aux);
+    
+    feche(arq_prod);
+}

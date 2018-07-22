@@ -1,0 +1,57 @@
+tipo localizacao{
+    inteiro: andar;
+    caractere: estante;   
+    
+}
+tipo livro{
+    caractere: titulo;
+    caractere: autor;
+    inteiro: num_paginas;
+    localizacao: local;
+}
+
+início {
+
+    livro: l;
+
+    l.titulo = "Lógica de Programação";
+    l.autor = "Carlos";
+    l.num_paginas = 250;
+
+    escreva("Título: ", l.titulo);
+    escreva("Autor: ", l.autor);
+    escreva("Número de Páginas: ", l.num_paginas);
+    
+    livro: livros[2];
+    
+    livros[0].titulo = "Lógica de Programação";
+    livros[0].autor = "Carlos";
+    livros[0].num_paginas = 250;
+    livros[0].local.andar = 3;
+    livros[0].local.estante = "B7";
+    
+    livros[1].titulo = "Lógica";
+    livros[1].autor = "José";
+    livros[1].num_paginas = 350;
+    livros[1].local.andar = 2;
+    livros[1].local.estante = "AA";
+    
+    escreva(" ");
+    escreva("Livro 1");
+    escreva(" ");
+    escreva("Título: ", livros[0].titulo);
+    escreva("Autor: ", livros[0].autor);
+    escreva("Número de Páginas: ", livros[0].num_paginas);
+    escreva("Andar: ", livros[0].local.andar);
+    escreva("Estante: ", livros[0].local.estante);
+    
+    escreva(" ");
+    escreva("Livro 2");
+    escreva(" ");
+    escreva("Título: ", livros[1].titulo);
+    escreva("Autor: ", livros[1].autor);
+    escreva("Número de Páginas: ", livros[1].num_paginas);
+    escreva("Andar: ", livros[1].local.andar);
+    escreva("Estante: ", livros[1].local.estante);
+    
+}

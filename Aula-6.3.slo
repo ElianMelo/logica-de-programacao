@@ -1,0 +1,29 @@
+tipo produto {
+    inteiro: codigo;
+    caractere: nome;
+}
+
+início {
+    arquivo: arq_prod;
+    inteiro: cod;
+    produto: aux;
+    
+    leia("Código do produto",cod);
+ 
+    abra(arq_prod);
+    
+    repita{
+        copie(arq_prod, aux);
+        avance(arq_prod);
+    } enquanto (aux.codigo <> cod e não fda(arq_prod));
+    
+    se (aux.codigo == cod){
+        escreva("Nome: ", aux.nome);
+        escreva("Código: ", aux.codigo);
+    } senão {
+        escreva("Registro não encontrado");
+}
+    
+    feche(arq_prod);
+    
+}

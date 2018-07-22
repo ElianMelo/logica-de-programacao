@@ -1,0 +1,33 @@
+// Tipo customizado que representa um aluno
+tipo aluno {
+    caractere: nome;
+    lógico: aprovado;
+}
+
+início {
+    // Vetor de alunos
+    aluno: alunos[5];
+    
+    // Declaração de variáveis para controle
+    inteiro: i;
+    inteiro: n;
+    
+    // Lê as informações e atribui aos alunos
+    para i de 0 até 4 passo 1 {
+        leia("Nome", alunos[i].nome);
+        leia("Aprovado", alunos[i].aprovado);
+    }
+    
+    n = 0;
+    // Escreve os nomes dos alunos aprovados apenas
+    para i de 0 até 4 passo 1 {
+        se (alunos[i].aprovado == verdadeiro) {
+            // Incrementa o contador de alunos aprovados
+            n = n + 1;
+            escreva(alunos[i].nome);
+        }
+    }
+    
+    // Escreve o número de alunos aprovados
+    escreva("Número de aprovados: ", n);
+}

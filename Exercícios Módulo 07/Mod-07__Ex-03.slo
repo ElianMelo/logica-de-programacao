@@ -1,0 +1,26 @@
+início {
+    // Declaração das variáveis
+    inteiro: n;
+    inteiro: r;
+    
+    // Lê o valor para calcular o fatorial
+    leia("Valor para calcular", n);
+
+    // Calcula o fatorial
+    r = fatorial(n);
+    
+    // Escreve o resultado
+    escreva(r);
+}
+
+// Função recursiva para cálculo do fatorial
+função fatorial(inteiro: n) -> inteiro {
+    // Quando n for 0 ou 1, retorna 1 (0! e 1! é 1)
+    // Este é o critério de parada
+    se (n == 0 ou n == 1) {
+        retorne 1;
+    }
+    
+    // Multiplica o número atual pelo fatorial do seu número anterior
+    retorne n * fatorial(n - 1);
+}

@@ -1,0 +1,10 @@
+início {
+    
+lógico: v;
+v = pot(2, 3) <= pot(3, 2);
+se (v == VERDADEIRO) {
+	escreva("SIM");
+}
+escreva("NÃO");
+
+}

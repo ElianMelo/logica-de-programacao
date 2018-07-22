@@ -1,0 +1,41 @@
+tipo contato{ 
+caractere: nome;
+inteiro: telefone;    
+}
+
+início {
+
+contato: contatos[3];
+contato: aux;
+caractere: nome;
+
+leia("Digite o nome a ser pesquisado.",nome);
+
+contatos[0].nome = "Ronaldo";
+contatos[0].telefone = 11112627;
+
+contatos[1].nome = "Gabriel";
+contatos[1].telefone = 11113637;
+
+contatos[2].nome = "Jeferson";
+contatos[2].telefone = 11114647;
+
+arquivo: agenda_telefonica;
+
+abra(agenda_telefonica);
+
+    repita{
+        copie(agenda_telefonica, aux);
+        avance(agenda_telefonica);
+    } enquanto (aux.nome <> nome e não fda(agenda_telefonica));
+    
+    se(aux.nome == nome){
+        escreva(aux.nome);
+        escreva(aux.telefone); 
+    }senão{
+        escreva("Contato não encontrado");   
+    }
+
+feche(agenda_telefonica);
+
+}

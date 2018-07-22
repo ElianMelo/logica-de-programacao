@@ -1,0 +1,90 @@
+// Cria o tipo livro
+tipo livro {
+    caractere: titulo;
+    caractere: autor;
+    caractere: assunto;
+    inteiro: num_pag;
+}
+
+início {
+    // Arquivos ('bib' é o arquivo que conterá os registros de 'bib1' e 'bib2')
+    arquivo: bib;
+    arquivo: bib1;
+    arquivo: bib2;
+    
+    livro: l;
+    
+    // Grava alguns registros em 'bib1'
+    abra(bib1);
+    l.titulo = "Lógica de Programação";
+    l.autor = "José Silva";
+    l.assunto = "Lógica de Programação";
+    l.num_pag = 125;
+    guarde(bib1, l);
+    avance(bib1);
+    
+    l.titulo = "Aprenda Programação";
+    l.autor = "Pedro Oliveira";
+    l.assunto = "Lógica de Programação";
+    l.num_pag = 200;
+    guarde(bib1, l);
+    avance(bib1);
+    
+    l.titulo = "Como Programar";
+    l.autor = "Júlia Santos";
+    l.assunto = "Lógica de Programação";
+    l.num_pag = 147;
+    
+    guarde(bib1, l);
+    feche(bib1);
+    
+    // Grava alguns registros em 'bib2'
+    abra(bib2);
+    l.titulo = "Fundamentos de Java";
+    l.autor = "Maria Lúcia";
+    l.assunto = "Java";
+    l.num_pag = 245;
+    guarde(bib2, l);
+    avance(bib2);
+    
+    l.titulo = "Como Programar em Java";
+    l.autor = "Mariana Veiga";
+    l.assunto = "Java";
+    l.num_pag = 297;
+    guarde(bib2, l);
+    feche(bib2);
+    
+    // Abre 'bib'
+    abra(bib);
+    
+    // Copia os registros de 'bib1' para 'bib'
+    abra(bib1);
+    repita {
+        copie(bib1, l);
+        guarde(bib, l);
+        avance(bib1);
+        avance(bib);
+    } enquanto (não fda(bib1));
+    feche(bib1);
+    
+    // Copia os registros de 'bib2' para 'bib'
+    abra(bib2);
+    repita {
+        copie(bib2, l);
+        guarde(bib, l);
+        avance(bib2);
+        avance(bib);
+    } enquanto (não fda(bib2));
+    feche(bib2);
+    
+    // Posiciona no primeiro registro de 'bib'
+    posicione(bib, 1);
+    
+    // Imprime as informações dos livros cadastros em 'bib'
+    repita {
+        copie(bib, l);
+        escreva(l.titulo, " - ", l.autor, " - ", l.assunto, " - ", l.num_pag);
+        avance(bib);
+    } enquanto (não fda(bib));
+    feche(bib);
+}

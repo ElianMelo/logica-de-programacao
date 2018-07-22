@@ -1,0 +1,37 @@
+início {
+    inteiro: v[5];
+    inteiro: i;
+    
+    inteiro: j;
+    inteiro: k;
+    inteiro: aux;
+    
+    
+    para i de 0 até 4 passo 1
+    {
+     leia("Digite um valor",v[i]);
+    }
+    j = 0;   
+    enquanto (j < 4){
+        k = j+1;
+        enquanto(k < 5){
+            
+    //Compara o de tras com o da frente   
+    se(v[j] > v[k]){
+        aux = v[j];
+        v[j] = v[k];
+        v[k] = aux;
+        
+        }
+        k += 1;
+    }
+    j += 1;
+}   
+    
+//Resposta
+    para i de 0 até 4 passo 1
+    {
+     escreva(v[i]);
+    }     
+    
+}

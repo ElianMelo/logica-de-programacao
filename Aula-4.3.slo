@@ -1,0 +1,54 @@
+início {
+    inteiro: c;
+    inteiro: d;
+    inteiro: f;
+    inteiro: g;
+    c = 1;
+    d = 1;
+    f = 1;
+    g = 6;
+    
+    escreva("            enquanto ");
+    enquanto (c <= 5)
+    {  
+        escreva(c);
+        c += 1;
+    }
+    
+    escreva("FIM");
+    
+    enquanto (d <= 5)
+    {
+        se (d % 2 == 0)
+        {
+            escreva(d); 
+        }
+        d += 1;
+    }
+    
+    escreva("FIM");
+    
+    escreva("            repita enquanto ");
+    
+    repita   
+    {  
+        escreva(f);
+        f += 1;
+    }
+    enquanto (f <= 5);
+    
+    escreva("            diferença entre eles ");
+    
+    enquanto (g <= 5)
+    {  
+        escreva(g);
+        g += 1;
+    }
+    
+    repita   
+    {  
+        escreva(g);
+        g += 1;
+    }
+    enquanto (g <= 5);
+}

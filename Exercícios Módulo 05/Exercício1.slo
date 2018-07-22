@@ -1,0 +1,24 @@
+início {
+    inteiro: contador;
+    real: soma;
+    real: auxiliarSoma;
+    real: media;
+    inteiro: i;
+    real: notas[5];
+    
+    contador = 0;
+    
+    para i de 0 até 4 passo 1{
+        leia ("Nota",notas[i]);
+        contador += 1;
+    }
+    para i de 0 até 4 passo 1{
+        escreva("nota ",i+1,": ",notas[i]);   
+    }
+    para i de 0 até 4 passo 1{
+        auxiliarSoma = notas[i];
+        soma = soma + auxiliarSoma;
+        media = soma/contador;    
+    }
+    escreva("Média:",media);
+}

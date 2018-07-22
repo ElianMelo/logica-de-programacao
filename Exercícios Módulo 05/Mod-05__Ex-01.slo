@@ -1,0 +1,26 @@
+início {
+    // Define as variáveis
+    real: notas[5];
+    real: media;
+    inteiro: i;
+    
+    // Inicia o valor da média como 0
+    media = 0;
+    
+    // Lê todas as notas, e vai acumulando os valores na média
+    para i de 0 até 4 passo 1 {
+        leia("Nota", notas[i]);
+        media = media + notas[i];
+    }
+    
+    // Mostra as notas digitadas
+    para i de 0 até 4 passo 1 {
+        escreva("Nota: ", notas[i]);
+    }
+    
+    // Divide a soma das notas por 5 e atribui à própria variável
+    media = media / 5;
+    
+    // Escreve a média final
+    escreva("Média: ", media);
+}

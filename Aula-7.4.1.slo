@@ -1,0 +1,26 @@
+início {
+    inteiro: x;
+    inteiro: y;
+    inteiro: m;
+    
+    leia("Número 1", x);
+    leia("Número 2", y);
+    
+    maior(x, y);
+    
+    //m = maior(x, y);
+    
+    //escreva("Maior Valor: ", maior(x, y));
+}
+
+função maior(inteiro: n1, inteiro: n2) -> inteiro{
+    inteiro: maior; 
+    
+    se(n1 >= n2){
+        maior = n1;    
+    } senão {
+        maior = n2;     
+    }
+    
+    retorne maior; 
+}

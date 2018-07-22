@@ -1,0 +1,177 @@
+// Define o contato
+tipo contato {
+    caractere: nome;
+    caractere: tel;
+}
+
+// O arquivo é uma variável global, então pode ser acessada por todas as funções
+global arquivo: agenda;
+
+início {
+    // Variável para guardar a opção escolhida
+    inteiro: op;
+    
+    // Fica em loop mostrando as opções, até que a opção sair seja escolhida
+    repita {
+        op = mostrar_opcoes();
+
+        se (op == 1) {
+            inserir();
+        } senão se (op == 2) {
+            alterar();
+        } senão se (op == 3) {
+            excluir();
+        } senão se (op == 4) {
+            mostrar_todos();
+        } senão se (op == 5) {
+            escreva("Fim do Programa");
+        } senão {
+            escreva("Opção Inválida");
+        }
+        
+    } enquanto (op <> 5);
+}
+
+// Mostra as opções.
+função mostrar_opcoes() -> inteiro {
+    inteiro: op;
+    
+    // Exibe as opções
+    escreva("1 - Inserir");
+    escreva("2 - Alterar");
+    escreva("3 - Excluir");
+    escreva("4 - Mostrar Todos");
+    escreva("5 - Sair");
+    
+    // Lê uma opção e retorna qual foi escolhida
+    leia("Qual a opção?", op);
+    escreva("Opção escolhida: ", op);
+    retorne op;
+}
+
+// Insere um registro
+função inserir() {
+    contato: c;
+    
+    // Pergunta nome e telefone
+    leia("Nome", c.nome);
+    leia("Telefone", c.tel);
+    
+    // Abre o arquivo
+    abra(agenda);
+    
+    // Vai até o final do arquivo
+    repita {
+        avance(agenda);
+    } enquanto (não fda(agenda));
+    
+    // Grava o registro
+    guarde(agenda, c);
+    
+    // Fecha o arquivo
+    feche(agenda);
+}
+
+// Altera um registro
+função alterar() {
+    caractere: nome;
+    contato: c;
+    
+    // Lê o nome para ser alterado
+    leia("Nome para alterar", nome);
+    
+    // Abre o arquivo
+    abra(agenda);
+    
+    // Procura pelo nome desejado
+    repita {
+        copie(agenda, c);
+        se (nome <> c.nome) {
+            avance(agenda);
+        }
+    } enquanto (nome <> c.nome e não fda(agenda));
+    
+    se (nome <> c.nome) {
+        // Não encontrou o nome. Fecha o arquivo e sai da função
+        escreva("Nome não encontrado");
+        feche(agenda);
+        retorne;
+    }
+    
+    // Lê os novos dados
+    leia("Novo nome", c.nome);
+    leia("Novo telefone", c.tel);
+    
+    // Grava os novos dados
+    guarde(agenda, c);
+    escreva("O registro com o nome ", nome, " foi alterado!");
+    
+    // Fecha o arquivo
+    feche(agenda);
+}
+
+// Exclui um registro
+função excluir() {
+    caractere: nome;
+    contato: c;
+    
+    // Lê o nome para excluir
+    leia("Nome para excluir", nome);
+    
+    // Abre o arquivo
+    abra(agenda);
+    
+    // Procura pelo nome desejado
+    repita {
+        copie(agenda, c);
+        se (nome <> c.nome) {
+            avance(agenda);
+        }
+    } enquanto (nome <> c.nome e não fda(agenda));
+    
+    se (nome <> c.nome) {
+        // Não encontrou o nome. Fecha o arquivo e sai da função
+        escreva("Nome não encontrado");
+        feche(agenda);
+        retorne;
+    }
+    
+    // Exclui o registro encontrado
+    elimine(agenda);
+    escreva("O registro com o nome ", nome, " foi excluído!");
+    
+    // Fecha o arquivo
+    feche(agenda);
+}
+
+// Mostra os registros existentes
+função mostrar_todos() {
+    contato: c;
+    inteiro: contador;
+    lógico: ativo;
+    
+    // Conta a quantidade de registros
+    contador = 0;
+    
+    // Abre o arquivo
+    abra(agenda);
+    
+    // Itera sobre os registros, exibindo as informações
+    repita {
+        // copie() retorna um valor lógico. Se o registro corrente não existe mais (foi excluído), retorna falso.
+        // Se o registro existe, retorna verdadeiro. Se o retorno for falso, simplesmente avança para o próximo.
+        ativo = copie(agenda, c);
+        
+        se (ativo == verdadeiro) {
+            escreva("Nome: ", c.nome, " - Telefone: ", c.tel);
+            contador = contador + 1;
+        }
+        avance(agenda);
+    } enquanto (não fda(agenda));
+    
+    // Mostra o número de registros
+    escreva("Número de registros: ", contador);
+    
+    // Fecha o arquivo
+    feche(agenda);
+}

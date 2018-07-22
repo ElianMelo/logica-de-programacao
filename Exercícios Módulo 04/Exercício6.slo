@@ -1,0 +1,16 @@
+início {
+    inteiro: min;
+    inteiro: max;
+    
+    leia("Valor de mínimo",min);
+    leia("Valor de máximo",max);
+    
+    enquanto(min <= max)
+    {
+        se (min % 2 == 0)
+        {
+             escreva(min); 
+        }
+        min += 1;
+    } 
+}

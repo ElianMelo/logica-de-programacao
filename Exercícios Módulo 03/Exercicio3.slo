@@ -1,0 +1,15 @@
+início {
+    real:a;
+    real:p;
+    real:l;
+    
+    leia("Número de lados",l);
+    
+    a = ( 3 * pot(l,2) * rad(3.0) ) / 2;
+    
+    p = 6 * l;
+    
+    escreva("Número de lados: ",l);
+    escreva("Área do hexágono: ",a);
+    escreva("Perímetro: ",p);
+}

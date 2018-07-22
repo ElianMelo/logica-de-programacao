@@ -1,0 +1,14 @@
+início {
+    // Declaração das variáveis
+    lógico: v;
+    lógico: x;
+    
+    // Lê o valor de v
+    leia("V", v);
+    
+    // Calcula o resultado da expressão
+    x = 5 * 3 + rad(7 * 7) <= 100 ou não v e v;
+    
+    // Exibe o resultado
+    escreva(x);
+}

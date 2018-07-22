@@ -1,0 +1,25 @@
+início {
+    inteiro: a;
+    
+    escreva("         estrutura para");
+    
+    para a de 1 até 5 passo 1
+    {
+       escreva(a);     
+    }
+    
+    escreva("         pares");
+    
+    para a de 10 até 20 passo 2
+    {
+       escreva(a);     
+    }
+    
+   escreva("         diminuindo");
+    
+    para a de 50 até 40 passo -2
+    {
+       escreva(a);     
+    }
+    
+}

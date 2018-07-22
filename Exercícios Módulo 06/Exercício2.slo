@@ -1,0 +1,89 @@
+tipo livro{
+    caractere: nome;
+    caractere: autor;
+    caractere: assunto;
+    inteiro: num_pag;
+}
+
+início {
+    
+    arquivo: livraria_A;
+    arquivo: livraria_B;
+    arquivo: livraria;
+    
+    livro: l;
+    livro: aux;
+    
+    abra(livraria_A);
+    
+    l.nome = "AA";
+    l.autor = "AA";
+    l.assunto = "AA";
+    l.num_pag = 10;
+    guarde(livraria_A,l);
+    
+    avance(livraria_A);
+    
+    l.nome = "BB";
+    l.autor = "BB";
+    l.assunto = "BB";
+    l.num_pag = 11;
+    guarde(livraria_A,l);
+    
+    feche(livraria_A);
+    
+    abra(livraria_B);
+    
+    l.nome = "CC";
+    l.autor = "CC";
+    l.assunto = "CC";
+    l.num_pag = 12;
+    guarde(livraria_B,l);
+    
+    avance(livraria_B);
+    
+    l.nome = "DD";
+    l.autor = "DD";
+    l.assunto = "DD";
+    l.num_pag = 13;
+    guarde(livraria_B,l);
+    
+    feche(livraria_B);
+    
+    //livraria
+    
+    abra(livraria);
+    
+    abra(livraria_A);
+    
+    repita {
+        copie(livraria_A, l);
+        guarde(livraria, l);
+        avance(livraria_A);
+        avance(livraria);
+    } enquanto (não fda(livraria_A));
+    
+    feche(livraria_A);
+    
+    
+    abra(livraria_B);
+    
+    repita {
+        copie(livraria_B, l);
+        guarde(livraria, l);
+        avance(livraria_B);
+        avance(livraria);
+    } enquanto (não fda(livraria_B));
+    
+    feche(livraria_B);
+    
+    posicione(livraria,1);
+    
+    repita {
+         copie(livraria, aux);
+         escreva(aux.nome, " - ", aux.autor, " - ", aux.assunto, " - ",aux.num_pag);
+         avance(livraria);
+     } enquanto (não fda(livraria));
+
+    feche(livraria);  
+}

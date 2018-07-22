@@ -1,0 +1,51 @@
+início {
+    inteiro: v;
+    
+    leia("Escreva um número entre 1 e 10",v);
+    
+    se (v > 10)
+    {
+        v = 10;
+        escreva("O seu valor foi alterado: ",v) ;
+    }
+    senão
+    {
+        v = v;
+        escreva("O valor é: ",v);
+    }
+    
+    leia("Escreva qualquer número",v);
+    
+    se (v > 10)
+    {
+        v = 10;
+        escreva("Valor maior que 10: ",v);
+    }
+    senão
+    {
+        v = 0;
+        escreva("Valor menor que 10: ",v);
+    }
+    
+    //Outro código
+    escreva("   Outro código");
+    
+    inteiro: valor;
+    
+    leia("Escreva um número",valor);
+    
+    se (valor == 0)
+    {
+        escreva("Número neutro");   
+    }
+    senão se (valor > 0)
+    {
+        escreva("Número positivo"); 
+    }
+    //se (valor < 0) NÃO PRECISA FAZER A VERIFICAÇÃO
+    senão
+    {
+        escreva("Número negativo");
+    }
+    
+}

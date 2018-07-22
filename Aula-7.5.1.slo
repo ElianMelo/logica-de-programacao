@@ -1,0 +1,11 @@
+início {
+    contar(40);
+}
+
+função contar(inteiro: n){
+    escreva(n);
+    
+    se(n < 50){
+        contar(n + 1);
+    }   
+}

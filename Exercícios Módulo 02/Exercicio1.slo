@@ -1,0 +1,13 @@
+início {
+    inteiro: n1;
+    inteiro: n2;
+    inteiro: n3;
+    
+    leia("Primeiro Valor Inteiro",n1);
+    leia("Segundo Valor Inteiro",n2);
+    leia("Terceiro Valor Inteiro",n3);
+    
+    escreva("Primeiro Valor - ",n1);
+    escreva("Segundo Valor - ",n2);
+    escreva("Terceiro Valor - ",n3);
+}

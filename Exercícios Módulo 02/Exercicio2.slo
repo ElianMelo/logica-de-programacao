@@ -1,0 +1,13 @@
+início {
+    real: n1;
+    real: n2;
+    real: s;
+    
+    leia("Primeiro Valor",n1);
+    leia("Segundo Valor",n2);
+    
+    s = (n1+n2);
+    
+    escreva(s);
+    
+}

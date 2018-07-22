@@ -1,0 +1,16 @@
+início {
+    // Declaração das variáveis
+    real: n1;
+    real: n2;
+    real: soma;
+    
+    // Leitura dos valores
+    leia("Valor 1", n1);
+    leia("Valor 2", n2);
+    
+    // Soma dos valores
+    soma = n1 + n2;
+    
+    // Exibição da soma
+    escreva(soma);
+}

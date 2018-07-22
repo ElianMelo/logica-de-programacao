@@ -1,0 +1,39 @@
+// Declara o tipo filme
+tipo filme {
+    caractere: nome;
+    inteiro: ano;
+}
+
+início {
+     // Cria o arquivo e uma variável auxiliar
+     arquivo: filmes;
+     filme: aux;
+      
+     // Lê o nome e o ano do filme
+     leia("Nome", aux.nome);
+     leia("Ano", aux.ano);
+     
+     // Abre o arquivo
+     abra(filmes);
+    
+     // Vai até o primeiro registro vazio no fim do arquivo
+     repita {
+         avance(filmes);
+     } enquanto (não fda(filmes));
+     
+     // Grava os dados no arquivo
+     guarde(filmes, aux);
+     
+     // Volta para o primeiro registro do arquivo
+     posicione(filmes, 1);
+     
+     // Itera sobre todos os registros existente, imprimindo o nome e ano do filme
+     repita {
+         copie(filmes, aux);
+         escreva(aux.nome, " - ", aux.ano);
+         avance(filmes);
+     } enquanto (não fda(filmes));
+     
+     // Fecha o arquivo
+     feche(filmes);
+}

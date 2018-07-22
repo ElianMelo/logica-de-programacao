@@ -1,0 +1,30 @@
+início {
+    inteiro: numeros;
+    inteiro: a;
+    inteiro: min;
+    inteiro: max;
+    
+    numeros = 0;
+    
+    min =  9999999;
+    max = -9999999;
+    
+    para a de 1 até 5 passo 1
+    {
+        numeros = leia("Digite um número inteiro ",numeros);
+         
+        se (numeros < min) 
+        {
+            min = numeros;
+        }
+        
+        se (numeros > max) 
+        {
+            max = numeros;
+        }
+        
+    }
+    
+    escreva("O menor valor é: ",min);
+    escreva("O maior valor é: ",max);
+}

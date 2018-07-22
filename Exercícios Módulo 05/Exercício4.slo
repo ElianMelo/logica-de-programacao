@@ -1,0 +1,23 @@
+tipo aluno{
+    caractere: nome;
+    lógico: aprovado; 
+}
+início {
+    
+    aluno: aluno[5];
+    caractere: a;
+    lógico: b;
+    inteiro: x;
+  
+    para x de 0 até 4 passo 1{   
+    aluno[x].nome = leia("Nome do Aluno",a);
+    aluno[x].aprovado = leia("verdadeiro ou falso",b);
+    }  
+     
+    para x de 0 até 4 passo 1{ 
+    se(aluno[x].aprovado == verdadeiro){
+    escreva(aluno[x].nome);
+    escreva(aluno[x].aprovado);
+    }
+    }
+}

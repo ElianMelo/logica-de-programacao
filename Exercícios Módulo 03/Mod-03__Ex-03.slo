@@ -1,0 +1,19 @@
+início {
+    // Declaração das variáveis
+    real: l;
+    real: a;
+    real: p;
+    
+    // Lê o valor de l
+    leia("Lado do hexágono", l);
+    
+    // Calcula a área
+    a = (3 * pot(l, 2) * rad(3.0)) / 2;
+    
+    // Calcula o perímetro
+    p = 6 * l;
+    
+    // Exibe o resultado
+    escreva("Área: ", a);
+    escreva("Perímetro: ", p);
+}

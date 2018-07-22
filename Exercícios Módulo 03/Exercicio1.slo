@@ -1,0 +1,26 @@
+início {
+    real: a;
+    real: b;
+    real: c;
+    real: x1;
+    real: x2;
+    real: delta;
+    
+    leia("Valor de A",a);
+    leia("Valor de B",b);
+    leia("Valor de C",c);
+    
+    delta = (pot(b,2))-(4*(a)*(c));
+    
+    x1 = ((-(b))+rad(delta))/(2*(a));
+    x2 = ((-(b))-rad(delta))/(2*(a));
+
+    escreva("Valor de A: ",a);
+    escreva("Valor de B: ",b);
+    escreva("Valor de C: ",c);
+    
+    escreva("Valor de Delta: ",delta);
+    
+    escreva("Valor de x1: ",x1);
+    escreva("Valor de x2: ",x2);
+}

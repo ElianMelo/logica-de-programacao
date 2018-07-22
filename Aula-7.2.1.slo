@@ -1,0 +1,20 @@
+início {
+    inteiro: i;
+    
+    escreva("A contagem vai iniciar");
+    contar();
+    escreva("A contagem terminou");
+    
+    escreva("A contagem vai iniciar novamente");
+    contar();
+    escreva("A contagem terminou novamente");
+}
+
+função contar() {
+ inteiro: i;
+    
+ para i de 0 até 10 passo 1{
+     escreva(i);
+ }   
+}
+

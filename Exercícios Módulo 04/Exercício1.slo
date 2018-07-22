@@ -1,0 +1,26 @@
+início {
+    real: nota;
+    real: contagem;
+    real: soma;
+    real: media;
+    
+    nota = 0;
+    contagem = 0;
+    soma = 0;
+    
+    enquanto(nota <> -1)
+    {
+        nota = leia("escreva a nota ",nota);
+        se (nota <> -1)
+        {
+            soma = soma + nota;
+            contagem = contagem + 1;
+        }      
+    }
+    escreva("A soma das notas são: ",soma);
+    escreva("Foram inseridas: ",contagem, " notas");
+    
+    media = soma/contagem;
+    
+    escreva ("A sua média equivale a: ",media);
+}

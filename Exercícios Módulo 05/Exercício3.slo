@@ -1,0 +1,41 @@
+início {
+    inteiro: i;
+    inteiro: j;
+    inteiro: matrizA[3][2];
+    inteiro: matrizB[3][2];
+    inteiro: matrizC[3][2];
+    
+    //Linha:separados Coluna:espaçados
+        matrizA[0][0] = 5;
+    matrizA[0][1] = 42;
+    
+        matrizA[1][0] = 10;
+    matrizA[1][1] = 22;
+    
+        matrizA[2][0] = 65;
+    matrizA[2][1] = 14;
+    
+    //Linha:separados Coluna:espaçados
+        matrizB[0][0] = 28;
+    matrizB[0][1] = 32;
+    
+        matrizB[1][0] = 70;
+    matrizB[1][1] = 2;
+    
+        matrizB[2][0] = 1;
+    matrizB[2][1] = 52;
+
+
+    
+    para i de 0 até 1 passo 1{
+        para j de 0 até 2 passo 1{
+            matrizC[j][i] = matrizA[j][i] + matrizB[j][i];
+        }
+    }
+    
+    para i de 0 até 1 passo 1{
+        para j de 0 até 2 passo 1{
+            escreva(matrizC[j][i]);
+        }
+    }
+}

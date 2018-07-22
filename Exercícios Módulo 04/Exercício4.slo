@@ -1,0 +1,17 @@
+início {
+    inteiro: numero;
+    inteiro: contador;
+    inteiro: resultado;
+    inteiro: a;
+    
+    contador = 0;
+    numero = leia("Escreva Um número ",numero);
+    
+    para a de 1 até 10 passo 1
+    {
+        contador += 1;
+        resultado = numero*contador;
+        escreva(numero," x ",contador," = ",resultado);
+        
+    }
+}

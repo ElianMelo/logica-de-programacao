@@ -1,0 +1,17 @@
+início {
+    real: n1;
+    real: n2;
+    
+    leia("Número 1", n1);
+    leia("Número 2", n2);
+    
+    media(n1, n2);
+    
+    escreva("Média: ",r);
+}
+
+função media(real:x, real:y){
+    real: r;    
+
+    r = (x + y) / 2;   
+}

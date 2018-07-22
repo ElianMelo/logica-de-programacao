@@ -1,0 +1,37 @@
+início {
+    // Declaração das variáveis
+    real: temp;
+    caractere: conversao;
+    real: temp_conv;
+    
+    // Lê os valores
+    leia("Temperatura", temp);
+    leia("Conversão (C - converter para Celsius; F - converter para Fahrenheit)", conversao);
+    
+    // Verifica a conversão desejada para poder chamar a função correspondente
+    se (conversao == "C" ou conversao == "c") {
+        temp_conv = converter_para_celsius(temp);
+        escreva("Temperatura: ", temp_conv, "C");
+        
+    } senão se (conversao == "F" ou conversao == "f") {
+        temp_conv = converter_para_fahrenheit(temp);
+        escreva("Temperatura: ", temp_conv, "F");
+        
+    } senão {
+        escreva("Opção inválida");
+    }
+}
+
+// Função que converte a temperatura de Fahrenheit para Celsius
+função converter_para_celsius(real: temperatura) -> real {
+    real: result;
+    result = (temperatura - 32) / 1.8;
+    retorne result;
+}
+
+// Função que converte a temperatura de Celsius para Fahrenheit
+função converter_para_fahrenheit(real: temperatura) -> real {
+    real: result;
+    result = temperatura * 1.8 + 32;
+    retorne result;
+}

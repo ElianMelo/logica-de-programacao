@@ -1,0 +1,38 @@
+início {
+    // Cria o vetor de números
+    inteiro: numeros[5];
+    
+    // Cria as variáveis para varredura
+    inteiro: i;
+    inteiro: j;
+    inteiro: aux;
+    
+    // Define os números para cada posição
+    numeros[0] = 8;
+    numeros[1] = 2;
+    numeros[2] = 3;
+    numeros[3] = 7;
+    numeros[4] = 6;
+    
+    i = 0;
+    // i varia de 0 até a penúltima posição do vetor 
+    enquanto(i < 4) {
+        j = i + 1;
+        // j varia da posição seguinte de i até a última posição do vetor
+        enquanto (j < 5) {
+            se (numeros[i] > numeros[j]) {
+                // Se o número da posição anterior for maior que o da posterior, troca os dois de lugar
+                aux = numeros[i];
+                numeros[i] = numeros[j];
+                numeros[j] = aux;
+            }
+            j = j + 1;
+        }
+        i = i + 1;
+    }
+    
+    // Mostra os elementos do vetor, já ordenados
+    para i de 0 até 4 passo 1 {
+        escreva(numeros[i]);
+    }
+}

@@ -1,0 +1,210 @@
+início {
+    //
+    //    Operadores Aritmeticos
+    //
+    escreva("    Operadores aritmeticos");
+    //Soma
+    inteiro: soma;
+    
+    soma = 20 + 30;
+    
+    escreva("soma ",soma);
+    
+    //Subtração
+    inteiro: subtracao;
+    
+    subtracao = 20 - 30;
+    
+    escreva("subtração ",subtracao);
+    
+    //variáveis
+    inteiro: result;
+    inteiro: v1;
+    inteiro: v2;
+    
+    v1 = 35;
+    v2 = 10;
+    
+    //Subtração
+    result = v1 - v2;
+    
+    escreva("subtração de variáveis ",result);
+    
+    v2 = 2;
+    
+    //Multiplicação
+    result = v1 * v2;
+    
+    escreva("multiplicação ",result);
+    
+    //Divisão
+    result = v1 / v2;
+    
+    escreva("divisão ",result);
+    
+    v1 = 10;
+    
+    //resto
+    result = v1 % v2;
+    
+    escreva("resto ",result);
+    
+    //potenciação
+    result = pot(v1, v2);
+    
+    escreva("potenciação ",result);
+    
+    v1 = 100;
+    
+    //radiciação
+    result = rad(v1);
+    
+    escreva("radiciação ",result);
+    
+    //equação
+    result = v1 + 2 * v2;
+    
+    escreva("equação ",result);
+    
+    //equação com parenteses
+    result = (v1 + 2) * v2;
+    
+    escreva("equação com parenteses ",result);
+    //
+    //    Operadores Relacionais
+    //
+    escreva("    Operadores relacionais");
+    
+    lógico: resultado;
+    
+    //10 > 5 ?
+    resultado = 10 > 5;
+    
+    escreva("10 > 5 ? ",resultado);
+    
+    //10 < 5 ?
+    resultado = 10 < 5;
+    
+    escreva("10 < 5 ? ",resultado);
+    
+    //10 = 10 ?
+    resultado = 10 == 10;
+    
+    escreva("10 = 10 ? ",resultado);
+    
+    //10 <> 10 ?
+    resultado = 10 <> 10;
+    
+    escreva("10 <> 10 ? ",resultado);
+    
+    // v1 <> v2 ?
+    v1 = 5;
+    v2 = 7;
+    
+    resultado = v1 <> v2;
+    
+    escreva("v1 <> v2 ? ",resultado);
+    
+    // v1 <= 7 ?
+    
+    resultado = v1 <= 7;
+    
+    escreva("v1 <= 7 ? ",resultado);
+    
+    // v1 <= v2 ?
+    
+    resultado = v1 <= v2;
+    
+    escreva("v1 <= v2 ? ",resultado);
+    
+    //v1 + v2 == v2 + v1 ?
+    
+    resultado = v1 + v2 == v2 + v1;
+    
+    escreva("v1 + v2 == v2 + v1 ? ",resultado);
+    
+    //v1 + v2 == v2 - v1 ?
+    
+    resultado = v1 + v2 == v2 - v1;
+    
+    escreva("v1 + v2 == v2 - v1 ? ",resultado);
+    
+    //
+    //    Operadores Lógicos
+    //
+    escreva("    Operadores lógicos");
+    
+    lógico: comer_chocolate;
+    lógico: tomar_banho;
+    lógico: almocar;
+    
+    //e
+    
+    //Tomei banho e almocei (e)
+    tomar_banho = verdadeiro;
+    almocar = verdadeiro;
+    
+    comer_chocolate = tomar_banho e almocar;
+    
+    escreva(comer_chocolate);
+    
+    //Almocei mas não tomei banho (e)
+    
+    tomar_banho = falso;
+    
+    comer_chocolate = tomar_banho e almocar;
+    
+    escreva(comer_chocolate);
+    
+    //ou
+    
+    //Almocei mas não tomei banho (ou)
+    
+    comer_chocolate = tomar_banho ou almocar;
+    
+    escreva(comer_chocolate);
+    
+    //Tomei banho mas não almocei (ou)
+    
+    tomar_banho = verdadeiro;
+    almocar = falso;
+    
+    comer_chocolate = tomar_banho ou almocar;
+    
+    escreva(comer_chocolate);
+    
+    //Tomei banho e almocei (ou)
+    
+    almocar = verdadeiro;
+    
+    comer_chocolate = tomar_banho ou almocar;
+    
+    escreva(comer_chocolate);
+    
+    //Não tomei banho e nem almocei (ou)
+    
+    tomar_banho = falso;
+    almocar = falso;
+    
+    comer_chocolate = tomar_banho ou almocar;
+    
+    escreva(comer_chocolate);
+    
+    //não
+    
+    //Não cheguei atrasado
+    lógico: chegar_atrasado;
+    lógico: jantar;
+    
+    chegar_atrasado = falso;
+    jantar = não chegar_atrasado;
+    
+    escreva(jantar);
+    
+    //Cheguei atrasado
+    chegar_atrasado = verdadeiro;
+    jantar = não chegar_atrasado;
+    
+    escreva(jantar);
+    
+}

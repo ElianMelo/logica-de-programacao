@@ -1,0 +1,28 @@
+início {
+    //Declarando Variáveis
+    
+    inteiro: i;
+    real: r;
+    caractere: c;
+    lógico: l;
+    
+    i = 10;
+    r = 4.25;
+    c = "texto";
+    l = verdadeiro;
+    
+    escreva(i, " -> ", r);
+    escreva(c);
+    escreva(i);
+    
+    inteiro: o;
+    caractere: x;
+    
+    //abrir caixa de diálogo para inserir o valor
+    
+    leia("Valor de o inteiro", o);
+    leia("Valor de x caractere", x);
+    
+    escreva (o, " -> ", x);
+    
+}

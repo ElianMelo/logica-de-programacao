@@ -1,0 +1,139 @@
+global arquivo: agenda;
+
+tipo contato{
+    caractere:nome;
+    inteiro:telefone;
+    
+}
+início {
+    inteiro: op;
+    
+    repita{
+    escreva(" ");
+    escreva("1.Inserir");
+    escreva("2.Alterar");
+    escreva("3.Excluir");
+    escreva("4.Mostrar Todos");
+    escreva("5.Sair");
+    leia("Qual Opção ?",op);
+    se (op == 1){
+        inserir();}
+    se (op == 2){
+        alterar();}
+    se (op == 3){
+        excluir();}
+    se (op == 4){
+        mostrar_todos();}
+    se (op == 5){
+        escreva(" ");
+        escreva("Programa Finalizado");
+    }
+    
+    }enquanto (op <> 5);
+}
+
+função inserir(){
+    
+    caractere:nome;
+    inteiro:telefone;
+    
+    nome = leia("Nome Do Contato", nome);
+    telefone = leia("Telefone Do Contato", telefone);
+    
+    contato: contatos;
+    contatos.nome = nome;
+    contatos.telefone = telefone;
+    
+    abra(agenda);
+    
+    repita{
+        avance(agenda);
+    }enquanto (não fda(agenda));
+    
+    guarde(agenda,contatos);
+    
+    escreva(" ");
+    escreva("Contato Registrado com Sucesso");
+    
+    feche(agenda);
+}
+
+função alterar(){
+    
+    caractere: nome;
+    inteiro: telefone;
+    contato: contatos;
+    
+    abra(agenda);
+    
+    leia("Nome Do Contato", nome);
+    
+    repita{
+        copie(agenda,contatos);
+        se (contatos.nome <> nome) {
+            avance(agenda);
+        }
+    }enquanto (contatos.nome <> nome e não fda(agenda));
+    
+    se (contatos.nome == nome){
+        leia("Novo Nome Do Contato: ", nome);
+        leia("Novo Número Do Contato: ", telefone);
+        contatos.nome = nome;
+        contatos.telefone = telefone;
+        guarde(agenda,contatos);
+        escreva(" ");
+        escreva("Contato Alterado com Sucesso");
+    } senão {
+        escreva(" ");
+        escreva("Contato não encontrado");
+    }
+    
+    feche(agenda);
+}
+
+função excluir(){
+    
+    caractere: nome;
+    contato: contatos;
+    
+    leia("Nome Do Contato", nome);
+    
+    abra(agenda);
+    
+    repita{
+        copie(agenda,contatos);
+        se (contatos.nome <> nome){
+            avance(agenda);
+        }
+    } enquanto (contatos.nome <> nome e não fda(agenda));
+    
+    se (contatos.nome == nome){
+        elimine(agenda);
+        escreva(" ");
+        escreva("Registro Deletado com Sucesso");
+    } senão {
+        escreva(" ");
+        escreva("Registro não encontrado");
+    }
+    
+    feche(agenda);
+    
+}
+
+função mostrar_todos(){
+    
+    contato: contatos;    
+    
+    abra(agenda);
+    
+    repita{
+        copie(agenda, contatos);
+        escreva(" ");
+        escreva("Nome: ",contatos.nome);
+        escreva("Telefone: ",contatos.telefone);
+        avance(agenda);    
+    }enquanto (não fda(agenda));
+    
+    feche(agenda);
+       
+}

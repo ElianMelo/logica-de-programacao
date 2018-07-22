@@ -1,0 +1,25 @@
+início {
+    // Variáveis a, b e c
+    real: a;
+    real: b;
+    real: c;
+    
+    // Raízes
+    real: x1;
+    real: x2;
+    
+    // Leitura dos valores
+    leia("A", a);
+    leia("B", b);
+    leia("C", c);
+    
+    // Raiz 1
+    x1 = (-b + rad(pot(b, 2) - 4 * a * c)) / (2 * a);
+    
+    // Raiz 2
+    x2 = (-b - rad(pot(b, 2) - 4 * a * c)) / (2 * a);
+    
+    // Exibição do resultado
+    escreva("Raiz 1: ", x1);
+    escreva("Raiz 2: ", x2);
+}

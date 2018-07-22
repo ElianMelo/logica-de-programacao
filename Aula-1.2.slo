@@ -1,0 +1,13 @@
+início {
+    int n1 = 5 ;
+    int n2 = 8 ;
+    int n3 = 9 ;
+    int m = (n1 + n2 + n3)/3 ;
+    se (m < 7) 
+    escreva ("Aluno reprovado");
+    senão 
+    escreva ("Aluno aprovado");
+    
+      
+    escreva("Meu primeiro algoritmo!"); 
+}

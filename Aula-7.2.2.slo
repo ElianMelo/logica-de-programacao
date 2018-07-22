@@ -1,0 +1,23 @@
+início {
+    inteiro: i;
+    
+    escreva("A contagem vai iniciar");
+    contar(0,10);
+    escreva("A contagem terminou");
+    
+    escreva("A contagem vai iniciar novamente");
+    contar(20,30);
+    escreva("A contagem terminou novamente");
+}
+
+função contar(inteiro:min, inteiro:max) {
+ inteiro: i;
+ 
+ i = min; 
+ 
+ enquanto(i <= max){
+     escreva(i);
+     i = i + 1;
+   }  
+}
+

@@ -1,0 +1,66 @@
+// Cria o contato
+tipo contato {
+    caractere: nome;
+    inteiro: telefone;
+}
+
+início {
+    // Arquivo para armazenar os registros
+    arquivo: agenda;
+    
+    // Vetor com os contatos a serem cadastrados
+    contato: contatos[5];
+    
+    // Variáveis de controle
+    contato: aux;
+    inteiro: i;
+    caractere: nome;
+    
+    // Cadastro de alguns contatos
+    contatos[0].nome = "Pedro";
+    contatos[0].telefone = 11114632;
+    contatos[1].nome = "Paulo";
+    contatos[1].telefone = 11118427;
+    contatos[2].nome = "Maria";
+    contatos[2].telefone = 11117523;
+    contatos[3].nome = "Ana";
+    contatos[3].telefone = 11112309;
+    contatos[4].nome = "João";
+    contatos[4].telefone = 11116652;
+    
+    // Abre o arquivo
+    abra(agenda);
+    
+    // Armazena todos os registros na agenda
+    para i de 0 até 4 passo 1 {
+        guarde(agenda, contatos[i]);
+        avance(agenda);
+    }
+    
+    // Fecha o arquivo
+    feche(agenda);
+    
+    // Solicita um nome para pesquisa
+    leia("Nome", nome);
+    
+    // Abre a agenda
+    abra(agenda);
+    
+    // Itera sobre todos os elementos do arquivo, até que o nome desejado seja encontrado
+    // ou os registros terminem
+    repita {
+        copie(agenda, aux);
+        avance(agenda);
+    } enquanto (aux.nome <> nome e não fda(agenda));
+    
+    se (aux.nome == nome) {
+        // Encontrou o registro, mostra os dados
+        escreva(aux.nome, " -> ", aux.telefone);
+    } senão {
+        // O registro não foi encontrado
+        escreva("Nome ", nome, " não existe");
+    }
+    
+    // Fecha o arquivo
+    feche(agenda);
+}

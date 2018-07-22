@@ -1,0 +1,11 @@
+início {
+    lógico:v;
+    lógico:x;
+    
+    leia("VERDADEIRO ou FALSO",v);
+    
+    x = 5 * 3 + rad(7*7) <= 100 ou não v e v;
+    
+    escreva("se v for: ",v);
+    escreva("x se torna: ",x);
+}

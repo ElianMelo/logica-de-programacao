@@ -1,0 +1,30 @@
+tipo filme{
+    caractere: nome;
+    inteiro: ano;
+}
+início {
+    arquivo: catalogo;
+    filme: f;
+    filme: aux;
+    
+    leia("Nome do filme",f.nome);
+    leia("Data do filme",f.ano);
+    
+    abra(catalogo);
+    
+    repita{
+        avance(catalogo);
+    }enquanto (não fda(catalogo));
+        
+    guarde(catalogo,f);
+    
+    posicione(catalogo,1);
+    
+    repita {
+         copie(catalogo, aux);
+         escreva(aux.nome, " - ", aux.ano);
+         avance(catalogo);
+     } enquanto (não fda(catalogo));
+    
+    feche(catalogo);
+}

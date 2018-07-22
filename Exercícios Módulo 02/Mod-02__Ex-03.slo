@@ -1,0 +1,16 @@
+início {
+    // Declaração das variáveis
+    caractere: t1;
+    caractere: t2;
+    caractere: result;
+    
+    // Leitura dos valores
+    leia("Texto 1", t1);
+    leia("Texto 2", t2);
+    
+    // Concatenação dos valores
+    result = concatene(t1, t2);
+    
+    // Exibição do resultado
+    escreva(result);
+}

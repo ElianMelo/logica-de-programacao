@@ -1,0 +1,15 @@
+início {
+    inteiro: valor;
+    inteiro: i;
+    inteiro: a;
+    
+    leia("Digite um valor", valor);
+    
+    a = 1;
+    
+    enquanto (i < valor) {
+        escreva(i);
+        i = i + a;
+        a = i - a;
+    }
+}

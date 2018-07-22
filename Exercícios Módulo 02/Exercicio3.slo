@@ -1,0 +1,11 @@
+início {
+    caractere: t1;
+    caractere: t2;
+    caractere: t3;
+    
+    leia("Escreva metade de uma palavra",t1);
+    leia("Agora a outra metade",t2);
+    
+    t3 = concatene(t1,t2);
+    escreva(t3);
+}

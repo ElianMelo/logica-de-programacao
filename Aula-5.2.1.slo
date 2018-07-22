@@ -1,0 +1,41 @@
+início {
+    inteiro: i;
+    inteiro: t;
+    inteiro: vetor[5];
+    
+    vetor[2] = 10;
+    vetor[3] = 5;
+    
+    escreva(vetor[2]," ",vetor[3]);
+      
+    para i de 0 até 4 passo 1 {
+        vetor[i] = 5;  
+    }    
+    
+    para i de 0 até 4 passo 1 {
+        t = vetor[1];
+        escreva(t);
+    }
+    
+    escreva("Segunda Parte");
+    
+    inteiro: o;
+    real: y;
+    real: r;
+    real: valores[5];
+    
+    r = 0;
+    
+    valores[0] = 2.3;
+    valores[1] = -4.0;
+    valores[2] = 3.5;
+    valores[3] = 2.2;
+    valores[4] = -1.7;
+    
+    para o de 0 até 4 passo 1 {
+       y = valores[o];
+       r = r + y;
+    }
+    
+    escreva("Soma: ",r); 
+}

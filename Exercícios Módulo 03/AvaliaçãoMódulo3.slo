@@ -1,0 +1,6 @@
+início {
+    lógico:v;
+    v = falso ou não (5 + 2 == 7);
+    
+    escreva(v);
+}

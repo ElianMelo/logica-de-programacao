@@ -1,0 +1,22 @@
+tipo produto{
+    inteiro: codigo;   
+    caractere: nome;
+}
+
+início { 
+    arquivo: arq_prod;
+    produto: p;
+    
+    p.codigo = 345;
+    p.nome = "Engrenagem";
+    
+    abra(arq_prod);
+    
+    repita{
+        avance(arq_prod);
+    } enquanto(não fda(arq_prod));
+    
+    guarde(arq_prod,p);  
+    feche(arq_prod);
+    
+}
